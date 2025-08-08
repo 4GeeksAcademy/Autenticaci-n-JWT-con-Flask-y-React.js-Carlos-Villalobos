@@ -13,7 +13,7 @@ import { SignUp } from "./pages/SignUp"
 import { Login } from "./pages/Login"
 import { UsersHome } from "./pages/UsersHome"
 import { UsersLayout } from "./pages/UsersLayout"
-import { PrivateRoute } from "./components/PrivateRoute";
+import { Private } from "./components/Private";
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
@@ -25,7 +25,7 @@ export const router = createBrowserRouter(
 
     // Root Route: All navigation will start from here.
     <>
-      <Route path="/users" element={<PrivateRoute />} errorElement={<h1>Not found!</h1>}>
+      <Route path="/private" element={<Private/>} errorElement={<h1>Not found!</h1>}>
         <Route element={<UsersLayout />} >
           <Route path="usershome" element={<UsersHome />} />
         </Route>

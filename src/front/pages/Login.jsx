@@ -45,7 +45,7 @@ export const Login = () => {
 
             localStorage.setItem("token", data.access_token);
             localStorage.setItem("user", JSON.stringify(data.user));
-            navigate("/users/usershome");
+            navigate("/private/usershome");
 
         } catch (err) {
             console.error("Login error:", err);
